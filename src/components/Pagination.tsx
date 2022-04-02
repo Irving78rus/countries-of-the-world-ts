@@ -1,37 +1,35 @@
 import "../App.css";
 import React, { useState, useEffect } from "react";
-import { NewPagenumber } from '../redux/action'
+import { NewPageNumber } from '../redux/action'
 import {useAppSelector,useAppDispatch} from '../hook'
  const  Pagination: React.FC =()=> {
   const paginationNumber = [];
 
-  const countriesPerPage = 10;
+  const cardPerPage = 10;
   const filtredCountry = useAppSelector(
-    (state) => state.counterReducer.filterCountry.length
+    (state) => state.counterReducer.filteredСountries.length
   );
-  const [Pagenumber, getPage2] = useState(1);
+  const [PageNumber, getPageNumber] = useState(1);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(NewPagenumber(Pagenumber));
-  }, [Pagenumber]);
+    dispatch(NewPageNumber(PageNumber));
+  }, [PageNumber]);
 
-  for (let i = 1; i <= Math.ceil(filtredCountry / countriesPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(filtredCountry / cardPerPage); i++) {
+  
     paginationNumber.push(i);
-     
   }
 
   return (
     <div className="pagination">
-      {paginationNumber.map((Pagenumber, index) => (
-        <a href="#">
-          {" "}
-          <div
-            key={index}
+      {paginationNumber.map((PageNumber, index) => (
+        <a href="#"  key={index}>
+           <div
             className="paginationNumber"
-            onClick={() => getPage2(Pagenumber)}
+            onClick={() => getPageNumber(PageNumber)}
           >
-            {Pagenumber}
+            {PageNumber}
           </div>
         </a>
       ))}

@@ -8,14 +8,14 @@ import {
   counter:number
   countries:Array<any>
   currentCountry:Array<any>
-  filterCountry:Array<any>
+  filteredСountries:Array<any>
  }
 
 const initalState = {
   countries: [],
   currentCountry: [],
   counter: 0,
-  filterCountry: [],
+  filteredСountries: [],
  
 };
 export function counterReducer(state: initalStateType = initalState, action:any) {
@@ -63,7 +63,7 @@ export function counterReducer(state: initalStateType = initalState, action:any)
       return {
         ...state,
 
-        filterCountry: [
+        filteredСountries: [
           ...state.countries.filter(
             (country) =>
               country.name.common

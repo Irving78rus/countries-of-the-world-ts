@@ -1,22 +1,21 @@
 import "../App.css";
 import React, { useEffect } from "react";
 import SingleCountry from "./SingleCountry";
-import { getFilterCountry } from '../redux/action'
+import { getFilteredСountries } from '../redux/action'
 import Pagination from "./Pagination";
 import { useAppSelector, useAppDispatch } from '../hook'
-
 
 const Country:React.FC=()=> {
 
   const dispatch = useAppDispatch();
-  const value = useAppSelector((state) => state.headerButtonsReducer.value);
+  const SearchValue = useAppSelector((state) => state.headerButtonsReducer.value);
   const filtredCountry = useAppSelector(
-    (state) => state.counterReducer.filterCountry
+    (state) => state.counterReducer.filteredСountries
   );
 
   useEffect(() => {
-    dispatch(getFilterCountry(value));
-  }, [value]);
+    dispatch(getFilteredСountries(SearchValue));
+  }, [SearchValue]);
   const countriesPerPage = 10;
 
   const currentPage = useAppSelector(
@@ -24,10 +23,7 @@ const Country:React.FC=()=> {
   );
   const LastCountryIndex = currentPage * countriesPerPage;
   const FirstCountryIndex = LastCountryIndex - countriesPerPage;
-  const currentCountry = filtredCountry.slice(
-    FirstCountryIndex,
-    LastCountryIndex
-  );
+  const currentCountry = filtredCountry.slice(FirstCountryIndex,LastCountryIndex);
 
   const renderCountry = currentCountry.map((country) => (
     <SingleCountry key={country.id} country={country}   />

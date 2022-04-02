@@ -30,7 +30,7 @@ export function saveCountries(countries:Array<any>):saveCountriesType {
         value
     }
 }
-export function NewPagenumber(Pagenumber:any){
+export function NewPageNumber(Pagenumber:any){
     return {
         type: NEW_PAGE_NUMBER,
         Pagenumber
@@ -50,7 +50,7 @@ export function addTargetCountry(targetCountryId:any) {
     };
   }
   
-  export function getFilterCountry(value:any) {
+  export function getFilteredСountries(value:any) {
     return {
       type: GET_FILTER_COUNTRY,
       value,
