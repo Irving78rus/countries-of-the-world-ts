@@ -1,5 +1,4 @@
 import React , { useEffect }from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { SiteDescription } from './components/SiteDescription';
 import {useAppSelector,useAppDispatch} from './hook'
@@ -8,7 +7,6 @@ import { Route, Routes } from 'react-router-dom';
 import Country from './components/Country';
 import Comparison from './components/Comparison';
 import { requestCountries } from './redux/action';
-
 
 function App() {
   const dispatch = useAppDispatch();
@@ -20,13 +18,9 @@ function App() {
     (state) => state.counterReducer.countries.length
   );
 
-
-
   return (
     <div className="App">
-
       <div className="header" >
-
         <HeaderButtons />
          
       </div>
