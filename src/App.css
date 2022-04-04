@@ -1,29 +1,85 @@
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--background-color);
+
 }
+
+html[data-theme='dark'] {
+  --background-color: #4b555e;
+  --header-footer-color: rgb(49, 49, 60);
+  --color-text: white;
+  --background-color-button: rgb(101, 96, 96);
+  --box-shadow: 0px 0px 26px -7px rgb(229, 221, 221);
+}
+
+html[data-theme='light'] {
+  --background-color: white;
+  --header-footer-color: rgb(241, 236, 236);
+  --color-text: black;
+  --background-color-button: #c3c3c3;
+  --box-shadow: 0px 0px 26px -7px rgba(34, 60, 80, 1)
+}
+
+
+
+
 p {
   margin: 0;
   padding: 8px;
+
 }
+
+#root {}
+
 .App {
+  display: flex;
   max-width: 100%;
   margin: 0 auto;
-
   text-align: center;
+  min-height: 100vh;
+
+  flex-direction: column;
+
 }
+
 .header {
   max-width: 100%;
   height: 100%;
-  background-color: rgb(241, 236, 236);
+  background-color: var(--header-footer-color);
+  color: var(--color-text);
 }
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: var(--header-footer-color);
+  flex: 0 0 auto;
+  color: var(--color-text);
+}
+
 .Search {
-  display: block;
-  width: 300px;
-  padding: 10px;
-  margin-left: auto;
+  display: flex;
+  max-width: 1320px;
+  padding: 10px 0px;
+  margin: 0 auto;
+  justify-content: space-between;
 }
+
 .Card {
   font-size: 13px;
   display: flex;
@@ -31,62 +87,86 @@ p {
   width: 200px;
   min-height: 100%;
   background-color: rgb(241, 236, 236);
-  -webkit-box-shadow: 0px 0px 26px -7px rgba(34, 60, 80, 1);
-  -moz-box-shadow: 0px 0px 26px -7px rgba(34, 60, 80, 1);
-  box-shadow: 0px 0px 26px -7px rgba(34, 60, 80, 1);
+  /* -webkit-box-shadow: 0px 0px 26px -7px rgba(34, 60, 80, 1);
+  -moz-box-shadow: 0px 0px 26px -7px rgba(34, 60, 80, 1); */
+  box-shadow: var(--box-shadow);
   margin: 20px;
 }
-.description{
- 
-   max-width: 100%;
-   margin: 0 auto;
-   margin-top: 200px;
-   
-   background-color: white;
- 
+
+.description {
+  max-width: 100%;
+  margin: 150px auto;
+
+  background-color: white;
 }
+
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  max-width: 1320px;
+  margin: 0 auto;
 }
-.pagination{
+
+.pagination {
   display: flex;
   max-width: 100%;
-  justify-content:center;
+  justify-content: center;
 }
-.paginationNumber{
+
+.paginationNumber {
   width: 40px;
-  height: 100%;
-  background-color: grey;
+  background-color: var(--background-color-button);
+  border: 1px solid grey;
   margin: 3px;
-  
+}
+
+.paginationNumber:hover {
+  background-color: rgb(194, 189, 189);
+  ;
 }
 
 .countryImg {
   width: 200px;
   height: 100px;
 }
-.pt15{
+
+.pt15 {
   padding-top: 15px;
 }
-.link-button {
 
+.link-button {
+  
   text-decoration: none;
-  border: 1px solid black;
+  padding: 4px;
   margin-left: 5px;
+  background-color: var(--background-color-button);
+  color: var(--color)
 }
- 
-.addCountry{
+
+.link-button:hover {
+  background-color: rgb(194, 189, 189);
+
+}
+.togle{
+  margin-left: 0;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.addCountry {
   position: absolute;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: red;
-   
+
 }
-a{
-  text-decoration:none;
+
+a {
+  text-decoration: none;
   color: black;
 }
 
@@ -96,31 +176,35 @@ a{
   align-items: end;
   justify-content: center;
 }
- 
-.CardAnimation{
-   
-  animation: red-sq;  
-	 animation-duration: 2s;
-	 animation-iteration-count: 1;
-	 animation-direction: alternate;
-	 animation-timing-function: linear;
-   position: relative;
+
+.CardAnimation {
+
+  animation: red-sq;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  position: relative;
 }
-@keyframes red-sq{
-  0%{
-    
-     bottom: 0;
-  }
-   50%{
-    bottom: 200px;
-    
-    opacity: 0;
-     
-   }
-   51%{
+
+@keyframes red-sq {
+  0% {
+
     bottom: 0;
-   }
-  100%{
+  }
+
+  50% {
+    bottom: 200px;
+
+    opacity: 0;
+
+  }
+
+  51% {
+    bottom: 0;
+  }
+
+  100% {
     opacity: 1;
   }
 }

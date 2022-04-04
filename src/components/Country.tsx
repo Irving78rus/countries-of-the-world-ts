@@ -1,12 +1,13 @@
 import "../App.css";
 import React, { useEffect } from "react";
 import SingleCountry from "./SingleCountry";
-import { getFilteredСountries } from '../redux/action'
+import { getFilteredСountries, requestCountries } from '../redux/action'
 import Pagination from "./Pagination";
 import { useAppSelector, useAppDispatch } from '../hook'
 
 const Country:React.FC=()=> {
-
+   
+   
   const dispatch = useAppDispatch();
   const SearchValue = useAppSelector((state) => state.headerButtonsReducer.value);
   const filtredCountry = useAppSelector(
@@ -29,11 +30,12 @@ const Country:React.FC=()=> {
     <SingleCountry key={country.id} country={country}   />
   ));
   return (
-    <div className="App">
+    <>
       <div className="container">{renderCountry}</div>
+
       <Pagination />
 
-    </div>
+    </>
   );
 }
 
