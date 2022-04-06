@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/countries-of-the-world-ts/static/css/main.ac64bbc6.css",
+    "main.js": "/countries-of-the-world-ts/static/js/main.e79e0193.js",
+    "index.html": "/countries-of-the-world-ts/index.html",
+    "main.ac64bbc6.css.map": "/countries-of-the-world-ts/static/css/main.ac64bbc6.css.map",
+    "main.e79e0193.js.map": "/countries-of-the-world-ts/static/js/main.e79e0193.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ac64bbc6.css",
+    "static/js/main.e79e0193.js"
+  ]
+}
