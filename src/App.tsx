@@ -8,6 +8,7 @@ import Country from './components/Country';
 import Comparison from './components/Comparison';
 import { requestCountries } from './redux/action';
 import {useTheme}  from './hook'
+import Earth from './components/Earth';
 function App() {
  
 
@@ -26,11 +27,12 @@ function App() {
         <HeaderButtons />
          
       </header>
+      {countryLoaded>249?null:<div>"Подгружаются данные о странах, пожалуйста, подождите..."</div>   } 
       <main className="main">
-      {countryLoaded>249?null:"Загрузка подождите..."   }  
+      
       
       <Routes>
-      <Route path="/" element={<SiteDescription />} />
+      <Route path="countries-of-the-world-ts" element={<SiteDescription />} />
         <Route path="navigation" element={<Country />} />
         <Route path="Comparison" element={<Comparison />} />
       </Routes>
