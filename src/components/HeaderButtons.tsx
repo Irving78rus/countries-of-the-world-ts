@@ -45,7 +45,7 @@ const HeaderButtons: React.FC = () => {
                 
             
             <div className="header-bottom ">
-                <div>
+                <div style={{ marginLeft: 20,marginRight: 20}}>
                     <button className="link-button togle" onClick={handleLightThemeClick}>light</button>
                     <button className="link-button togle" onClick={handleDarkThemeClick} >dark</button>
                     <Earth />
@@ -53,6 +53,8 @@ const HeaderButtons: React.FC = () => {
                 <div className="Search "> Найти страну (Eng or Rus leng)
                     <input type='text' value={Value} onChange={handleInput} />
                     <button className="link-button">search</button></div>
+  
+ 
 
             </div>
         </>

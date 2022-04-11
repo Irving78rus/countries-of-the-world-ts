@@ -21,12 +21,16 @@ function App() {
   // локал сторедж дарк тему футер
   return (
     <div className="App">
+      
       <header className="header">
+       
         <HeaderButtons />
+       
       </header>
-      {countryLoaded > 249 ?  <div><Country /></div> : <div>Данные загружаются, подождите...</div> }
+      
 
       <main className="main">
+      {countryLoaded > 249 ?   <Country />  : <div>Данные загружаются, подождите...</div> }
         <Routes>
           {/* <Route
             path="/"
@@ -40,7 +44,8 @@ function App() {
       <footer className="footer">
         <div>Данные о странах</div>
       </footer>
-    </div>
+      </div>
+   
   );
 }
 
