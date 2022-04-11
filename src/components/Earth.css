@@ -1,8 +1,4 @@
-.globe-container,
-.globe {
-    /* width: 200px;
-    height: 200px;   */
-}
+ 
 .globe-container {
     position: relative;  
     display: inline-block;

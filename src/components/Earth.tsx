@@ -7,7 +7,7 @@ const Earth:React.FC   = ()  => {
  
   return (
     <div className="globe-container">
-    <div className="globe">
+    
       <div className="globe-sphere" />
       <div className="globe-outer-shadow" />
       <div className="globe-worldmap">
@@ -15,7 +15,7 @@ const Earth:React.FC   = ()  => {
         <div className="globe-worldmap-front" />
       </div>
       <div className="globe-inner-shadow" />
-    </div>
+    
   </div>
   
   );

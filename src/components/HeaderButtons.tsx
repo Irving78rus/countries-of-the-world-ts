@@ -34,13 +34,16 @@ const HeaderButtons: React.FC = () => {
     const continents = ['North America', 'Africa', 'Oceania', 'Europe', 'Asia', 'Antarctica', 'South America']
     return (
         <>
-            <div className="pt15">
+             
 
                 {/* <NavLink to="/" className="link-button ">Главная</NavLink> */}
+                <ul>
                 {continents.map((continent, i) => <NavLink to="/" key={i} onClick={() => setValue(continent)} className="link-button ">{continent}</NavLink>)}
                 <NavLink to="/" onClick={() => setValue('')} className="link-button">Все</NavLink>
                 <NavLink to="/Comparison" className="link-button  ">Comparison {counterCountry ? <span className='addCountry'>{counterCountry}</span> : null}</NavLink>
-            </div>
+                </ul>
+                
+            
             <div className="header-bottom ">
                 <div>
                     <button className="link-button togle" onClick={handleLightThemeClick}>light</button>
