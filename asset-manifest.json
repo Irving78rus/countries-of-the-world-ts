@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/countries-of-the-world-ts/static/css/main.ac64bbc6.css",
-    "main.js": "/countries-of-the-world-ts/static/js/main.e79e0193.js",
+    "main.css": "/countries-of-the-world-ts/static/css/main.09047506.css",
+    "main.js": "/countries-of-the-world-ts/static/js/main.bf0a69c0.js",
+    "static/media/worldmap.svg": "/countries-of-the-world-ts/static/media/worldmap.4ef41a0fada1abccb753.svg",
+    "static/media/outer_shadow.svg": "/countries-of-the-world-ts/static/media/outer_shadow.eb17855e5d8f10eb1569.svg",
     "index.html": "/countries-of-the-world-ts/index.html",
-    "main.ac64bbc6.css.map": "/countries-of-the-world-ts/static/css/main.ac64bbc6.css.map",
-    "main.e79e0193.js.map": "/countries-of-the-world-ts/static/js/main.e79e0193.js.map"
+    "static/media/inner_shadow.svg": "/countries-of-the-world-ts/static/media/inner_shadow.5aeeed354d06ffe2716d.svg",
+    "main.09047506.css.map": "/countries-of-the-world-ts/static/css/main.09047506.css.map",
+    "main.bf0a69c0.js.map": "/countries-of-the-world-ts/static/js/main.bf0a69c0.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac64bbc6.css",
-    "static/js/main.e79e0193.js"
+    "static/css/main.09047506.css",
+    "static/js/main.bf0a69c0.js"
   ]
 }
