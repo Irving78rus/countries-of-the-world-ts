@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
 import "./App.css";
-import { SiteDescription } from "./components/SiteDescription";
 import { useAppSelector, useAppDispatch } from "./hook";
 import HeaderButtons from "./components/HeaderButtons";
 import { Route, Routes } from "react-router-dom";
 import Country from "./components/Country";
 import Comparison from "./components/Comparison";
 import { requestCountries } from "./redux/action";
-import { useTheme } from "./hook";
-import Earth from "./components/Earth";
+
 function App() {
   const dispatch = useAppDispatch();
   useEffect(() => {
@@ -21,31 +19,25 @@ function App() {
   // локал сторедж дарк тему футер
   return (
     <div className="App">
-      
-      <header className="header">
-       
-        <HeaderButtons />
-       
-      </header>
-      
+      {countryLoaded > 249 ? <>
+        <header className="header">
+          <HeaderButtons />
+        </header>
 
-      <main className="main">
-      {countryLoaded > 249 ?   <Country />  : <div>Данные загружаются, подождите...</div> }
-        <Routes>
-          {/* <Route
-            path="/"
-            element={<SiteDescription />}
-          /> */}
-          {/* <Route path="/" element={<Country />} /> */}
-          <Route path="Comparison" element={<Comparison />} />
-        </Routes>
-      </main>
+        <main className="main">
+          <Routes>
+            <Route path="/" element={<Country />} />
+            <Route path="Comparison" element={<Comparison />} />
+          </Routes>
+        </main>
 
-      <footer className="footer">
-        <div>Данные о странах</div>
-      </footer>
-      </div>
-   
+        <footer className="footer">
+          <div>Данные о странах</div>
+        </footer>
+      </> : <div>Данные загружаются, подождите...</div>}
+
+    </div>
+
   );
 }
 

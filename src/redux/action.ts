@@ -17,7 +17,7 @@ export function saveCountries(countries:Array<any>):saveCountriesType {
     response:Array<any>
   }
    
-  export const requestCountries = ()   => async (dispatch :any )  => {
+  export const requestCountries = ()   => async (dispatch :any ) => {
     let response = await getCountries();
   
     dispatch(saveCountries(response));
