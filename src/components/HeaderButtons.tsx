@@ -38,8 +38,8 @@ const HeaderButtons: React.FC = () => {
 
                 {/* <NavLink to="/" className="link-button ">Главная</NavLink> */}
                 <ul>
-                {continents.map((continent, i) => <NavLink to="/" key={i} onClick={() => setValue(continent)} className="link-button ">{continent}</NavLink>)}
-                <NavLink to="/" onClick={() => setValue('')} className="link-button">Все</NavLink>
+                {continents.map((continent, i) => <NavLink to="countries-of-the-world-ts" key={i} onClick={() => setValue(continent)} className="link-button ">{continent}</NavLink>)}
+                <NavLink to="countries-of-the-world-ts" onClick={() => setValue('')} className="link-button">Все</NavLink>
                 <NavLink to="/Comparison" className="link-button  ">Comparison {counterCountry ? <span className='addCountry'>{counterCountry}</span> : null}</NavLink>
                 </ul>
                 

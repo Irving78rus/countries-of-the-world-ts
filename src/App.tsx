@@ -26,7 +26,7 @@ function App() {
 
         <main className="main">
           <Routes>
-            <Route path="/" element={<Country />} />
+            <Route path="countries-of-the-world-ts" element={<Country />} />
             <Route path="Comparison" element={<Comparison />} />
           </Routes>
         </main>
