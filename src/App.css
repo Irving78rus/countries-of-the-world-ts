@@ -51,12 +51,15 @@ p {
 
 .Search {
   display: flex;
-  max-width: 1320px;
-  padding: 10px 0px;
-  margin: 0 auto;
+   align-items: flex-end;
+   
+  
+   
+}
+.header-bottom{
+  display: flex;
   justify-content: space-between;
 }
-
 .Card {
   font-size: 13px;
   display: flex;
@@ -115,6 +118,9 @@ p {
   margin-left: 5px;
   background-color: var(--background-color-button);
   color: var(--color)
+}
+input{
+  padding: 4px;
 }
 
 .link-button:hover {

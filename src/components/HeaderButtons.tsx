@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { dispatchValue, NewPageNumber } from '../redux/action'
 import '../App.css';
 import { useAppSelector, useAppDispatch, useTheme } from '../hook'
+import Earth from './Earth';
 const HeaderButtons: React.FC = () => {
 
     const { theme, setTheme } = useTheme()
@@ -35,18 +36,19 @@ const HeaderButtons: React.FC = () => {
         <>
             <div className="pt15">
 
-                <NavLink to="/" className="link-button ">Главная</NavLink>
-                {continents.map((continent, i) => <NavLink to="/navigation" key={i} onClick={() => setValue(continent)} className="link-button ">{continent}</NavLink>)}
-                <NavLink to="/navigation" onClick={() => setValue('')} className="link-button">Все</NavLink>
+                {/* <NavLink to="/" className="link-button ">Главная</NavLink> */}
+                {continents.map((continent, i) => <NavLink to="/" key={i} onClick={() => setValue(continent)} className="link-button ">{continent}</NavLink>)}
+                <NavLink to="/" onClick={() => setValue('')} className="link-button">Все</NavLink>
                 <NavLink to="/Comparison" className="link-button  ">Comparison {counterCountry ? <span className='addCountry'>{counterCountry}</span> : null}</NavLink>
             </div>
-            <div className="Search ">
+            <div className="header-bottom ">
                 <div>
                     <button className="link-button togle" onClick={handleLightThemeClick}>light</button>
                     <button className="link-button togle" onClick={handleDarkThemeClick} >dark</button>
+                    <Earth />
                 </div>
-                <div> Найти страну (Eng or Rus leng)
-                    <input type='test' value={Value} onChange={handleInput} />
+                <div className="Search "> Найти страну (Eng or Rus leng)
+                    <input type='text' value={Value} onChange={handleInput} />
                     <button className="link-button">search</button></div>
 
             </div>

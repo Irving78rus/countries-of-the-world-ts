@@ -24,17 +24,15 @@ function App() {
       <header className="header">
         <HeaderButtons />
       </header>
-      {countryLoaded > 249 ? null : (
-        <div>"Подгружаются данные о странах, пожалуйста, подождите..."</div>
-      )}
+      {countryLoaded > 249 ?  <div><Country /></div> : <div>Данные загружаются, подождите...</div> }
 
       <main className="main">
         <Routes>
-          <Route
+          {/* <Route
             path="/"
             element={<SiteDescription />}
-          />
-          <Route path="navigation" element={<Country />} />
+          /> */}
+          {/* <Route path="/" element={<Country />} /> */}
           <Route path="Comparison" element={<Comparison />} />
         </Routes>
       </main>

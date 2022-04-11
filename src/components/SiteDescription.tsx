@@ -6,7 +6,7 @@ export const SiteDescription: React.FC = () => {
         <Earth />
         <div className="description" >
             <h1> На этом сайте вы сможете узнать главную информацию о всех странах мира, а так же сравнить их на вкладке Comparsion</h1>
-
+            // "homepage": "https://irving78rus.github.io/countries-of-the-world-ts/",
         </div>
     </>
     )
