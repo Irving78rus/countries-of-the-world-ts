@@ -46,9 +46,7 @@ margin: 0 auto;
   height: 100%;
   background-color: var(--header-footer-color);
   color: var(--color-text);
-  
- 
-}
+  }
 .header-nav{
   display: flex;
   justify-content: center;
@@ -59,8 +57,7 @@ margin: 0 auto;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-   
-}
+   }
 .header-bottom__theme{
   display: flex;
   flex-wrap: wrap;
@@ -68,7 +65,12 @@ margin: 0 auto;
   align-items: center;
   margin: 0 20px;
 }
- 
+.Search {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 20px;
+}
 .main {
     flex: 1;
   display: flex;
@@ -77,12 +79,7 @@ margin: 0 auto;
   align-items: center;
 }
 
-.Search {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin: 0 20px;
-}
+
  
 .Card {
   font-size: 13px;
