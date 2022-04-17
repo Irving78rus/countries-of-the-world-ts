@@ -37,7 +37,7 @@ const HeaderButtons: React.FC = () => {
              
 
                 {/* <NavLink to="/" className="link-button ">Главная</NavLink> */}
-                <ul>
+                <ul className="header-nav">
                 {continents.map((continent, i) => <NavLink to="countries-of-the-world-ts" key={i} onClick={() => setValue(continent)} className="link-button ">{continent}</NavLink>)}
                 <NavLink to="countries-of-the-world-ts" onClick={() => setValue('')} className="link-button">Все</NavLink>
                 <NavLink to="/Comparison" className="link-button  ">Comparison {counterCountry ? <span className='addCountry'>{counterCountry}</span> : null}</NavLink>
@@ -45,7 +45,7 @@ const HeaderButtons: React.FC = () => {
                 
             
             <div className="header-bottom ">
-                <div style={{ marginLeft: 20,marginRight: 20}}>
+                <div className="header-bottom__theme">
                     <button className="link-button togle" onClick={handleLightThemeClick}>light</button>
                     <button className="link-button togle" onClick={handleDarkThemeClick} >dark</button>
                     <Earth />

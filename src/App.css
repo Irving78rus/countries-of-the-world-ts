@@ -49,12 +49,24 @@ margin: 0 auto;
   
  
 }
+.header-nav{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 .header-bottom {
   max-width: 1320px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
    
+}
+.header-bottom__theme{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
 }
  
 .main {
@@ -93,7 +105,7 @@ margin: 0 auto;
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 1320px;
   margin: 0 auto;
 }
@@ -102,6 +114,7 @@ margin: 0 auto;
   display: flex;
   max-width: 100%;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .paginationNumber {

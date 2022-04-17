@@ -2,17 +2,10 @@
 .globe-container {
     position: relative;  
     display: inline-block;
-    margin: 30px;
+    margin: 0  0 40px 30px;
     transform: scale(0.2);
 }
-.globe {
-    position: relative;  
-    display: block;
-    margin: 0;
-    padding: 0;
-    top: 0; 
-    left: 0;
-}
+ 
 .globe-worldmap,
 .globe-worldmap-front,
 .globe-worldmap-back,
